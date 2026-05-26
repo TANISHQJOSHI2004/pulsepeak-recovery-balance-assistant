@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PulsePeak Fitness | Home</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="site-body">
+<div class="app-layout">
+  <aside class="left-rail" id="leftRail">
+    <div class="brand-stack">
+      <h1>PulsePeak Fitness</h1>
+      <p>Prototype - Fitness platform</p>
+    </div>
+    <nav class="rail-nav" aria-label="Main navigation">
+      <ul class="menu-list">
+        <li><a href="index.html" class="menu-link active-page">Home</a></li>
+        <li><a href="programs.html" class="menu-link">Programs</a></li>
+        <li><a href="membership.html" class="menu-link">Membership</a></li>
+        <li><a href="about.html" class="menu-link">About</a></li>
+        <li><a href="contact.html" class="menu-link">Contact</a></li>
+        <li><a href="recovery.html" class="menu-link">Recovery Check</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="page-wrap">
+    <div class="top-mobile-bar">
+      <button type="button" id="menuButton" class="menu-button" aria-label="Open menu">☰</button>
+      <span class="mobile-title">PulsePeak Fitness</span>
+    </div>
+
+    <section class="hero-panel two-part">
+      <div class="hero-copy">
+        <span class="tiny-badge">Interactive Prototype</span>
+        <h2>The training should improve clarity instead of creating more confusion.</h2>
+        <p>A simple fitness website idea. Users can check programs, compare plans, read about trainers, and send an enquiry in one place.</p>
+        <div class="button-row">
+          <a href="programs.html" class="primary-button">Browse Different Programs</a>
+          <a href="membership.html" class="secondary-button">See Multiple Plan Options</a>
+        </div>
+      </div>
+      <div class="dark-summary">
+        <h3>Quick Overview</h3>
+        <p id="welcomeText">Welcome to PulsePeak Fitness.</p>
+        <ul class="plain-points">
+          <li>Responsive layout for desktop and mobile</li>
+          <li>Interactive search, filters, and accordion sections</li>
+          <li>Validated enquiry form with database storage</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="split-grid">
+      <article class="panel-card">
+        <h3>View the topic before searching.</h3>
+        <p>This small search helper helps users move to important pages quickly.</p>
+        <div class="search-line">
+          <input type="text" id="topicInput" placeholder="Try: yoga, membership, trainer, support">
+          <button type="button" id="topicButton">Find</button>
+        </div>
+        <div id="topicOutput" class="info-box">Your result will appear here.</div>
+      </article>
+      <article class="panel-card">
+        <h3>Latest announcements</h3>
+        <div class="notice-row">
+          <strong>Schedule update</strong>
+          <p>The weekly timetable now includes morning conditioning sessions.</p>
+        </div>
+        <div class="notice-row">
+          <strong>Student option</strong>
+          <p>The student plan now comes with one introductory consultation.</p>
+        </div>
+        <div class="notice-row">
+          <strong>Weekend access</strong>
+          <p>Recovery sessions are now included in the weekend schedule.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section-area">
+      <div class="section-text">
+        <h3>Main areas</h3>
+        <p>These sections help users move through the website quickly.</p>
+      </div>
+      <div class="tile-grid">
+        <article class="mini-tile">
+          <h4>Programs</h4>
+          <p>Check strength, conditioning, recovery, and personal training options.</p>
+          <a href="programs.html">Open Programs</a>
+        </article>
+        <article class="mini-tile">
+          <h4>Membership</h4>
+          <p>Compare each plan to understand the main differences between their features.</p>
+          <a href="membership.html">Open Membership</a>
+        </article>
+        <article class="mini-tile">
+          <h4>About</h4>
+          <p>Read the story, trainer details, and the values of the website.</p>
+          <a href="about.html">Open About</a>
+        </article>
+        <article class="mini-tile">
+          <h4>Contact</h4>
+          <p>Send an enquiry, check contact details, and use the validated form.</p>
+          <a href="contact.html">Open Contact</a>
+        </article>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-columns">
+        <div>
+          <p class="footer-heading">PulsePeak Fitness</p>
+          <p>Copyright © 2026 PulsePeak Fitness</p>
+          <p>Last updated: 23 May 2026</p>
+          <p>Contact: hello@pulsepeakfitness.com</p>
+        </div>
+        <div>
+          <p class="footer-heading">Quick Links</p>
+          <div class="footer-link-row">
+            <a href="index.html">Home</a>
+            <a href="programs.html">Programs</a>
+            <a href="membership.html">Membership</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

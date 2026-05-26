@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PulsePeak Fitness | Contact</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="site-body">
+<div class="app-layout">
+  <aside class="left-rail" id="leftRail">
+    <div class="brand-stack">
+      <h1>PulsePeak Fitness</h1>
+      <p>Prototype - Fitness platform</p>
+    </div>
+    <nav class="rail-nav" aria-label="Main navigation">
+      <ul class="menu-list">
+        <li><a href="index.html" class="menu-link">Home</a></li>
+        <li><a href="programs.html" class="menu-link">Programs</a></li>
+        <li><a href="membership.html" class="menu-link">Membership</a></li>
+        <li><a href="about.html" class="menu-link">About</a></li>
+        <li><a href="contact.html" class="menu-link active-page">Contact</a></li>
+        <li><a href="recovery.html" class="menu-link">Recovery Check</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="page-wrap">
+    <div class="top-mobile-bar">
+      <button type="button" id="menuButton" class="menu-button" aria-label="Open menu">☰</button>
+      <span class="mobile-title">PulsePeak Fitness</span>
+    </div>
+
+    <section class="title-panel">
+      <h2>Contact</h2>
+      <p>This page displays the business details and allows users to submit enquiries through a validated form and store them in the website database.</p>
+    </section>
+
+    <section class="contact-layout">
+      <article class="panel-card">
+        <h3>Business Details</h3>
+        <div class="detail-line"><strong>Address:</strong> 18 Active Lane, Melbourne VIC 3000</div>
+        <div class="detail-line"><strong>Phone:</strong> 03 8765 4321</div>
+        <div class="detail-line"><strong>Email:</strong> hello@pulsepeakfitness.com</div>
+        <div class="detail-line"><strong>Weekdays:</strong> Monday to Friday, 9:00 AM to 6:00 PM</div>
+        <div class="detail-line"><strong>Weekends:</strong> Saturday and Sunday, 10:00 AM to 5:00 PM</div>
+        <div class="map-area">
+          <p>Map Placeholder</p>
+        </div>
+      </article>
+
+      <article class="panel-card">
+        <h3>Send an Enquiry</h3>
+        <p>This form can be used to ask questions about programs, membership options, trainers, or support.</p>
+        <div id="formMessage" class="info-box">Form feedback will appear here.</div>
+        <form id="contactRequestForm" class="form-layout" novalidate>
+          <label for="visitorName" class="label-text">Full Name</label>
+          <input type="text" id="visitorName" placeholder="Full name">
+
+          <label for="visitorEmail" class="label-text">Email Address</label>
+          <input type="email" id="visitorEmail" placeholder="Email address">
+
+          <label for="visitorPhone" class="label-text">Phone Number</label>
+          <input type="text" id="visitorPhone" placeholder="Phone number" maxlength="10" inputmode="numeric">
+
+          <label for="visitorTopic" class="label-text">Topic</label>
+          <select id="visitorTopic">
+            <option value="">Choose topic</option>
+            <option value="Programs">Programs</option>
+            <option value="Membership">Membership</option>
+            <option value="Trainers">Trainers</option>
+            <option value="Support">Support</option>
+          </select>
+
+          <label for="visitorMessage" class="label-text">Your Message</label>
+          <textarea id="visitorMessage" rows="6" placeholder="Write your enquiry here"></textarea>
+
+          <button type="submit" class="submit-button">Submit Enquiry</button>
+        </form>
+      </article>
+    </section>
+
+    <section class="panel-card">
+      <h3>Saved Enquiries</h3>
+      <p>These saved records are loaded from the SQLite database through the local web server.</p>
+
+      <div class="filter-bar">
+        <input type="text" id="searchRequest" placeholder="Search by name, topic, or message">
+        <select id="filterTopic">
+          <option value="">All topics</option>
+          <option value="Programs">Programs</option>
+          <option value="Membership">Membership</option>
+          <option value="Trainers">Trainers</option>
+          <option value="Support">Support</option>
+        </select>
+        <select id="filterStatus">
+          <option value="">All status</option>
+          <option value="New">New</option>
+          <option value="Reviewed">Reviewed</option>
+        </select>
+        <button type="button" id="applyFilters" class="secondary-button small-button">Apply</button>
+        <button type="button" id="resetFilters" class="secondary-button small-button">Reset</button>
+      </div>
+
+      <div id="savedRequests" class="saved-box">No saved enquiries yet.</div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-columns">
+        <div>
+          <p class="footer-heading">PulsePeak Fitness</p>
+          <p>Copyright © 2026 PulsePeak Fitness</p>
+          <p>Last updated: 23 May 2026</p>
+          <p>Contact: hello@pulsepeakfitness.com</p>
+        </div>
+        <div>
+          <p class="footer-heading">Quick Links</p>
+          <div class="footer-link-row">
+            <a href="index.html">Home</a>
+            <a href="programs.html">Programs</a>
+            <a href="membership.html">Membership</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

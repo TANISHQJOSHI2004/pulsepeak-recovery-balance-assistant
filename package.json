@@ -1,0 +1,12 @@
+{
+  "name": "pulsepeak-fitness-10-2d",
+  "version": "1.0.0",
+  "description": "PulsePeak Fitness website with SQLite database integration for SIT774 10.2D",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "sqlite3": "^6.0.1"
+  }
+}

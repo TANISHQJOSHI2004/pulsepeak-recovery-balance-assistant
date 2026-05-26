@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PulsePeak Fitness | Programs</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="site-body">
+<div class="app-layout">
+  <aside class="left-rail" id="leftRail">
+    <div class="brand-stack">
+      <h1>PulsePeak Fitness</h1>
+      <p>Prototype - Fitness platform</p>
+    </div>
+    <nav class="rail-nav" aria-label="Main navigation">
+      <ul class="menu-list">
+        <li><a href="index.html" class="menu-link">Home</a></li>
+        <li><a href="programs.html" class="menu-link active-page">Programs</a></li>
+        <li><a href="membership.html" class="menu-link">Membership</a></li>
+        <li><a href="about.html" class="menu-link">About</a></li>
+        <li><a href="contact.html" class="menu-link">Contact</a></li>
+        <li><a href="recovery.html" class="menu-link">Recovery Check</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="page-wrap">
+    <div class="top-mobile-bar">
+      <button type="button" id="menuButton" class="menu-button" aria-label="Open menu">☰</button>
+      <span class="mobile-title">PulsePeak Fitness</span>
+    </div>
+
+    <section class="title-panel">
+      <h2>Programs</h2>
+      <p>This page gives a clear summary of the training categories and weekly timetable.</p>
+    </section>
+
+    <section class="panel-card">
+      <h3>Browse by focus</h3>
+      <div class="chip-row">
+        <button type="button" class="chip-button chip-active" data-show="all">All</button>
+        <button type="button" class="chip-button" data-show="strength">Strength</button>
+        <button type="button" class="chip-button" data-show="conditioning">Conditioning</button>
+        <button type="button" class="chip-button" data-show="recovery">Recovery</button>
+        <button type="button" class="chip-button" data-show="coaching">Coaching</button>
+      </div>
+    </section>
+
+    <section class="course-grid">
+      <article class="course-card" data-kind="strength" id="strength-zone">
+        <span class="small-tag">Strength</span>
+        <h3>Strength Builder</h3>
+        <p>Suitable for users who want to improve their form, build gym confidence, and develop strength steadily.</p>
+      </article>
+      <article class="course-card" data-kind="conditioning" id="hiit-zone">
+        <span class="small-tag">Conditioning</span>
+        <h3>HIIT Burn</h3>
+        <p>Made for short workouts that build stamina, boost energy, and improve overall work capacity.</p>
+      </article>
+      <article class="course-card" data-kind="recovery" id="recovery-zone">
+        <span class="small-tag">Recovery</span>
+        <h3>Flow and Recovery</h3>
+        <p>This focuses on breathing, flexibility, mobility, and lighter movements that suit all fitness levels.</p>
+      </article>
+      <article class="course-card" data-kind="coaching" id="coaching-zone">
+        <span class="small-tag">Coaching</span>
+        <h3>Personal Training</h3>
+        <p>Designed for users who want more direct guidance, personal planning, and stronger support.</p>
+      </article>
+    </section>
+
+    <section class="panel-card">
+      <h3>Draft weekly schedule</h3>
+      <div class="table-scroll">
+        <table class="basic-table">
+          <thead>
+            <tr>
+              <th>Program</th>
+              <th>Days</th>
+              <th>Time</th>
+              <th>Level</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Strength Builder</td><td>Mon / Wed / Fri</td><td>6:30 PM</td><td>Beginner to Intermediate</td></tr>
+            <tr><td>HIIT Burn</td><td>Tue / Thu</td><td>7:00 AM</td><td>Intermediate</td></tr>
+            <tr><td>Flow and Recovery</td><td>Sat / Sun</td><td>9:00 AM</td><td>All Levels</td></tr>
+            <tr><td>Personal Training</td><td>Flexible</td><td>By Appointment</td><td>All Levels</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-columns">
+        <div>
+          <p class="footer-heading">PulsePeak Fitness</p>
+          <p>Copyright © 2026 PulsePeak Fitness</p>
+          <p>Last updated: 23 May 2026</p>
+          <p>Contact: hello@pulsepeakfitness.com</p>
+        </div>
+        <div>
+          <p class="footer-heading">Quick Links</p>
+          <div class="footer-link-row">
+            <a href="index.html">Home</a>
+            <a href="programs.html">Programs</a>
+            <a href="membership.html">Membership</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

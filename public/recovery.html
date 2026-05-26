@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PulsePeak Fitness | Recovery Check</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="site-body">
+<div class="app-layout">
+  <aside class="left-rail" id="leftRail">
+    <div class="brand-stack">
+      <h1>PulsePeak Fitness</h1>
+      <p>Prototype - Fitness platform</p>
+    </div>
+
+    <nav class="rail-nav" aria-label="Main navigation">
+      <ul class="menu-list">
+        <li><a href="index.html" class="menu-link">Home</a></li>
+        <li><a href="programs.html" class="menu-link">Programs</a></li>
+        <li><a href="membership.html" class="menu-link">Membership</a></li>
+        <li><a href="about.html" class="menu-link">About</a></li>
+        <li><a href="contact.html" class="menu-link">Contact</a></li>
+        <li><a href="recovery.html" class="menu-link active-page">Recovery Check</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="page-wrap">
+    <div class="top-mobile-bar">
+      <button type="button" id="menuButton" class="menu-button" aria-label="Open menu">☰</button>
+      <span class="mobile-title">PulsePeak Fitness</span>
+    </div>
+
+    <section class="title-panel">
+      <h2>Smart Recovery and Burnout Balance Assistant</h2>
+      <p>
+        This guided feature follows the proposed lo-fi design by collecting a short recovery
+        check-in, showing a burnout-risk result, giving recovery advice, and generating a
+        balanced next-week plan.
+      </p>
+    </section>
+
+    <div id="recoveryMessage" class="info-box">
+      Complete the short check-in below. Your result will be calculated and saved in the website database.
+    </div>
+
+    <div class="recovery-shell">
+      <!-- Screen 1 -->
+      <section class="recovery-panel">
+        <div class="recovery-panel-head">
+          <h3>Recovery Check Form</h3>
+          <span class="recovery-brand">PulsePeak</span>
+        </div>
+
+        <div class="recovery-panel-body">
+          <form id="recoveryForm" class="check-form" novalidate>
+            <div class="form-row">
+              <label for="goalSelect">Goal</label>
+              <select id="goalSelect" class="recovery-select">
+                <option value="">Select your goal</option>
+                <option value="General Fitness">General Fitness</option>
+                <option value="Build Strength">Build Strength</option>
+                <option value="Fat Loss">Fat Loss</option>
+                <option value="Improve Endurance">Improve Endurance</option>
+                <option value="Recover Better">Recover Better</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="daysSelect">Workout days</label>
+              <select id="daysSelect" class="recovery-select">
+                <option value="">Select per week</option>
+                <option value="1">1 day</option>
+                <option value="2">2 days</option>
+                <option value="3">3 days</option>
+                <option value="4">4 days</option>
+                <option value="5">5 days</option>
+                <option value="6">6 days</option>
+                <option value="7">7 days</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label>Sleep quality</label>
+              <div class="scale-group">
+                <div class="scale-options">
+                  <label class="scale-box"><input type="radio" name="sleepQuality" value="1"><span>1</span></label>
+                  <label class="scale-box"><input type="radio" name="sleepQuality" value="2"><span>2</span></label>
+                  <label class="scale-box"><input type="radio" name="sleepQuality" value="3"><span>3</span></label>
+                  <label class="scale-box"><input type="radio" name="sleepQuality" value="4"><span>4</span></label>
+                  <label class="scale-box"><input type="radio" name="sleepQuality" value="5"><span>5</span></label>
+                </div>
+                <div class="scale-label-row">
+                  <span>Poor</span>
+                  <span>Excellent</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label>Stress level</label>
+              <div class="scale-group">
+                <div class="scale-options">
+                  <label class="scale-box"><input type="radio" name="stressLevel" value="1"><span>1</span></label>
+                  <label class="scale-box"><input type="radio" name="stressLevel" value="2"><span>2</span></label>
+                  <label class="scale-box"><input type="radio" name="stressLevel" value="3"><span>3</span></label>
+                  <label class="scale-box"><input type="radio" name="stressLevel" value="4"><span>4</span></label>
+                  <label class="scale-box"><input type="radio" name="stressLevel" value="5"><span>5</span></label>
+                </div>
+                <div class="scale-label-row">
+                  <span>Low</span>
+                  <span>High</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label>Soreness</label>
+              <div class="scale-group">
+                <div class="scale-options">
+                  <label class="scale-box"><input type="radio" name="sorenessLevel" value="1"><span>1</span></label>
+                  <label class="scale-box"><input type="radio" name="sorenessLevel" value="2"><span>2</span></label>
+                  <label class="scale-box"><input type="radio" name="sorenessLevel" value="3"><span>3</span></label>
+                  <label class="scale-box"><input type="radio" name="sorenessLevel" value="4"><span>4</span></label>
+                  <label class="scale-box"><input type="radio" name="sorenessLevel" value="5"><span>5</span></label>
+                </div>
+                <div class="scale-label-row">
+                  <span>Low</span>
+                  <span>High</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label>Energy</label>
+              <div class="scale-group">
+                <div class="scale-options">
+                  <label class="scale-box"><input type="radio" name="energyLevel" value="1"><span>1</span></label>
+                  <label class="scale-box"><input type="radio" name="energyLevel" value="2"><span>2</span></label>
+                  <label class="scale-box"><input type="radio" name="energyLevel" value="3"><span>3</span></label>
+                  <label class="scale-box"><input type="radio" name="energyLevel" value="4"><span>4</span></label>
+                  <label class="scale-box"><input type="radio" name="energyLevel" value="5"><span>5</span></label>
+                </div>
+                <div class="scale-label-row">
+                  <span>Low</span>
+                  <span>High</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="center-row">
+              <button type="submit" class="check-balance-button">Check Balance</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Screen 2 -->
+      <section class="recovery-panel hidden-section" id="riskDashboard">
+        <div class="recovery-panel-head">
+          <h3>Risk Dashboard</h3>
+          <span class="recovery-brand">PulsePeak</span>
+        </div>
+
+        <div class="recovery-panel-body">
+          <div class="risk-output">
+            <div class="risk-top">
+              <div>
+                <div class="mini-label">Burnout risk</div>
+                <div id="riskLevelText" class="risk-title">Medium</div>
+                <p id="riskSummary" class="small-note"></p>
+              </div>
+
+              <div class="risk-bar-shell">
+                <div class="risk-bar">
+                  <div id="riskFill" class="risk-fill medium"></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="reasonTags" class="reason-tags"></div>
+
+            <div class="dashboard-button-row">
+              <button type="button" id="goAdvice" class="secondary-button">See recovery advice</button>
+              <button type="button" id="goPlan" class="secondary-button">See next-week plan</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screen 3 -->
+      <section class="recovery-panel hidden-section" id="recoveryAdvice">
+        <div class="recovery-panel-head">
+          <h3>Recovery Advice</h3>
+          <span class="recovery-brand">PulsePeak</span>
+        </div>
+
+        <div class="recovery-panel-body">
+          <h4 class="list-title">Recommended actions</h4>
+          <div id="adviceList" class="advice-list"></div>
+        </div>
+      </section>
+
+      <!-- Screen 4 -->
+      <section class="recovery-panel hidden-section" id="nextWeekPlan">
+        <div class="recovery-panel-head">
+          <h3>Next Week Plan</h3>
+          <span class="recovery-brand">PulsePeak</span>
+        </div>
+
+        <div class="recovery-panel-body">
+          <h4 class="list-title">Next week plan</h4>
+          <div class="table-scroll">
+            <table class="plan-table">
+              <thead>
+                <tr>
+                  <th>Mon</th>
+                  <th>Tue</th>
+                  <th>Wed</th>
+                  <th>Thu</th>
+                  <th>Fri</th>
+                  <th>Sat</th>
+                  <th>Sun</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="planMon"></td>
+                  <td id="planTue"></td>
+                  <td id="planWed"></td>
+                  <td id="planThu"></td>
+                  <td id="planFri"></td>
+                  <td id="planSat"></td>
+                  <td id="planSun"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small-note">
+            This balanced plan is generated from the check-in result so the user can train more safely.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel-card">
+        <h3>Previous Check-ins</h3>
+        <p class="small-note">
+          This extra section goes beyond the lo-fi flow by storing previous results in the database
+          so that users can review their recent recovery pattern.
+        </p>
+        <div id="historyBox" class="saved-box">No saved recovery check-ins yet.</div>
+      </section>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-columns">
+        <div>
+          <p class="footer-heading">PulsePeak Fitness</p>
+          <p>Copyright © 2026 PulsePeak Fitness</p>
+          <p>Last updated: 23 May 2026</p>
+          <p>Contact: hello@pulsepeakfitness.com</p>
+        </div>
+        <div>
+          <p class="footer-heading">Quick Links</p>
+          <div class="footer-link-row">
+            <a href="index.html">Home</a>
+            <a href="programs.html">Programs</a>
+            <a href="membership.html">Membership</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="recovery.html">Recovery Check</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+</div>
+
+<script src="main.js"></script>
+<script src="recovery.js"></script>
+</body>
+</html>
